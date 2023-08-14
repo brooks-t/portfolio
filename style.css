@@ -1,11 +1,14 @@
 /* Variables */
 :root {
-    --background-dark: #010440;
-    --background-medium: #3D3D3D;
+    --background-dark: #010326;
+    --background-medium: #010440;
     --background-light: #fff;
     --primary-color: #05f2f2;
     --secondary-color: #fff;
     --tertiary-color: #2e2e2e;
+    --primary-font: 'Roboto', sans-serif;
+    --secondary-font: 'Roboto Condensed', sans-serif;
+    --tertiary-font: 'Space Mono', monospace;
 }
 
 /* CSS Reset */
@@ -51,7 +54,7 @@ a {
 
 /* Global Styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--primary-font);
     background-color: var(--background-dark);
     font-size: 1rem;
     color: var(--secondary-color);
@@ -78,20 +81,36 @@ nav ul {
 
 nav a {
     display: block;
+    transition: transform 0.2s ease-in-out;
 }
 
 nav a:hover {
     color: var(--primary-color);
+    transform: scale(1.1);
+
 }
 
 nav li:first-child {
     flex-basis: 100%;
     text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: var(--tertiary-font);
+}
+
+.nav-buttons {
+    font-size: 1.25rem;
 }
 
 /* Hero */
 #hero {
-    padding: 2rem 0;
+    padding: 12rem 0;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
 }
 
 /* Footer */
@@ -101,6 +120,8 @@ footer {
 
 footer h2 {
     text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
 }
 
 footer ul {
@@ -109,10 +130,16 @@ footer ul {
     flex-flow: row wrap;
     align-items: center;
     gap: 2rem;
+    padding: 2rem 0;
 }
 
 footer a {
     display: block;
+    transition: transform 0.2s ease-in-out;
+}
+
+footer a:hover {
+    transform: scale(1.2);
 }
 
 footer p {
