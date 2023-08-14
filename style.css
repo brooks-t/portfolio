@@ -64,6 +64,10 @@ a {
 
 /* Header */
 
+header {
+    padding: 2rem 0;
+}
+
 nav ul {
     display: flex;
     justify-content: space-between;
@@ -85,13 +89,23 @@ nav li:first-child {
     text-align: center;
 }
 
+/* Hero */
+#hero {
+    padding: 2rem 0;
+}
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+}
+
 footer h2 {
     text-align: center;
 }
 
 footer ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-flow: row wrap;
     align-items: center;
     gap: 2rem;
