@@ -1,9 +1,12 @@
 /* Variables */
 :root {
-    --background-dark: #2D2D2D;
+    --background-dark: #010440;
+    --background-medium: #3D3D3D;
+    --background-light: #fff;
+    --primary-color: #05f2f2;
+    --secondary-color: #fff;
+    --tertiary-color: #2e2e2e;
 }
-
-/* End Variables */
 
 /* CSS Reset */
 html {
@@ -42,13 +45,76 @@ img {
     height: auto;
 }
 
-/* End CSS Reset */
+a {
+    text-decoration: none;
+}
 
 /* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--background-dark);
-    color: #fff;
     font-size: 1rem;
+    color: var(--secondary-color);
     line-height: 1.6;
+}
+
+a {
+    color: var(--secondary-color);
+}
+
+/* Header */
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav a {
+    display: block;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+footer h2 {
+    text-align: center;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer a {
+    display: block;
+}
+
+footer p {
+    text-align: center;
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
 }
