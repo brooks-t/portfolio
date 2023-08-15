@@ -1,7 +1,7 @@
 /* Variables */
 :root {
     --background-dark: #010326;
-    --background-medium: #010440;
+    --background-medium: #093040;
     --background-light: #fff;
     --primary-color: #05f2f2;
     --secondary-color: #fff;
@@ -65,10 +65,9 @@ a {
     color: var(--secondary-color);
 }
 
-/* Header */
-
+/* Header Nav */
 header {
-    padding: 2rem 0;
+    padding: 1.5rem;
 }
 
 nav ul {
@@ -76,7 +75,7 @@ nav ul {
     justify-content: space-between;
     flex-flow: row wrap;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 nav a {
@@ -102,20 +101,55 @@ nav li:first-child {
     font-size: 1.25rem;
 }
 
-/* Hero */
+/* Hero Main */
 #hero {
-    padding: 12rem 0;
+    padding: 1rem 1.5rem 3rem 1.5rem;
 }
 
 #hero h1 {
     font-size: 3rem;
     font-weight: bold;
     color: var(--primary-color);
+    text-align: center;
+}
+
+#hero h2 {
+    text-align: center;
+}
+
+/* About Me */
+.alt-background {
+    background-color: var(--background-medium);
+    padding-top: 1rem;
+}
+
+#about-me {
+    padding: 1rem 1.5rem 2.5rem 1.5rem;
+}
+
+#about-me h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+#profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+#profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }
 
 /* Footer */
 footer {
-    padding: 2rem 0;
+    padding: 2rem 1.5rem;
 }
 
 footer h2 {
@@ -148,7 +182,10 @@ footer p {
 
 /* Media Queries */
 @media screen and (min-width: 768px) {
-    body {
+
+    header,
+    section,
+    footer {
         max-width: 1200px;
         margin: 0 auto;
     }
